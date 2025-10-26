@@ -1,0 +1,22 @@
+# Ignore logs, temp files, and data
+*.csv
+*.log
+*.pyc
+__pycache__/
+tick_data/*.csv
+
+# Ignore local virtual environments
+venv/
+.env/
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore git metadata
+.git
+.gitignore
+
+# Ignore system files
+.DS_Store
+Thumbs.db

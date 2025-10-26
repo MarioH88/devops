@@ -1,0 +1,29 @@
+# Ignore Git and local dev files
+.git/
+.github/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.md
+*.yml
+*.yaml
+
+# Ignore test and CI/CD dev directories
+tests/
+k8s/
+terraform/
+monitoring/
+.github/
+__pycache__/
+AUTH/__pycache__/
+TICKERS/__pycache__/
+
+# Ignore dev and doc files
+MANUAL_LIVE_DEMO.md
+demo_devops.py
+pytest.ini
+.flake8
+pyproject.toml
+GitInstaller.exe
