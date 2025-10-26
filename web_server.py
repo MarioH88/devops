@@ -411,7 +411,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>🤖 Alpaca ROC Trading Bot Dashboard</h1>
+                    <h1>🤖 MSITM DBU Live Devops</h1>
                     <p><span class="working-indicator"></span>Last Updated: {current_time.strftime('%Y-%m-%d %H:%M:%S ET')}</p>
                     <p>🌐 Running on Cloud Run</p>
                 </div>
