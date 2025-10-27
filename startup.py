@@ -12,11 +12,15 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# Configuration file paths
+AUTH_FILE = 'AUTH/auth.txt'
+TICKERS_FILE = 'TICKERS/my_tickers.txt'
+
 def check_configuration():
     """Check if required configuration files exist"""
     config_files = [
-        'AUTH/auth.txt',
-        'TICKERS/my_tickers.txt'
+        AUTH_FILE,
+        TICKERS_FILE
     ]
     
     missing_files = []
@@ -33,24 +37,24 @@ def create_sample_config():
     os.makedirs('AUTH', exist_ok=True)
     
     # Create sample auth.txt
-    if not os.path.exists('AUTH/auth.txt'):
+    if not os.path.exists(AUTH_FILE):
         sample_auth = {
             "APCA-API-KEY-ID": "YOUR_API_KEY_HERE",
             "APCA-API-SECRET-KEY": "YOUR_SECRET_KEY_HERE"
         }
-        with open('AUTH/auth.txt', 'w') as f:
+        with open(AUTH_FILE, 'w') as f:
             json.dump(sample_auth, f, indent=2)
-        logger.info("Created sample AUTH/auth.txt")
+        logger.info(f"Created sample {AUTH_FILE}")
     
     # Create TICKERS directory if it doesn't exist
     os.makedirs('TICKERS', exist_ok=True)
     
     # Create sample my_tickers.txt
-    if not os.path.exists('TICKERS/my_tickers.txt'):
+    if not os.path.exists(TICKERS_FILE):
         sample_tickers = "AAPL\nAMZN\nTSLA\nMA"
-        with open('TICKERS/my_tickers.txt', 'w') as f:
+        with open(TICKERS_FILE, 'w') as f:
             f.write(sample_tickers)
-        logger.info("Created sample TICKERS/my_tickers.txt")
+        logger.info(f"Created sample {TICKERS_FILE}")
 
 def main():
     """Main startup function"""

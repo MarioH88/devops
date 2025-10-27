@@ -5,21 +5,23 @@ on:
     branches: [ main ]
 
 jobs:
-  # Block non-owners from direct pushes to main
   branch-protection:
     runs-on: ubuntu-latest
-    if: github.actor != 'MarioH88'
+    if: >
+      github.actor != 'MarioH88' &&
+      github.actor != 'github-actions[bot]' &&
+      github.actor != 'dependabot[bot]'
     steps:
       - name: Block Unauthorized Direct Push
         run: |
-          echo "🚨 BLOCKED: Direct push to main not allowed"
+          echo "🚫 BLOCKED: Direct push to main is not allowed"
           echo "User: ${{ github.actor }}"
           echo ""
-          echo "📋 Please use Pull Request workflow:"
+          echo "Please use Pull Request workflow:"
           echo "1. Create a feature branch: git checkout -b feature/your-feature"
           echo "2. Submit a Pull Request to main branch"
           echo "3. Wait for @MarioH88 approval and merge"
           echo "4. Auto-deploy happens after approval"
           echo ""
-          echo "ℹ️ Only @MarioH88 can push directly to main"
+          echo "Only @MarioH88 or CI/CD bots may push directly to main."
           exit 1

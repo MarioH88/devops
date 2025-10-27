@@ -3,30 +3,34 @@ name: Auto Deploy After PR Approval
 on:
   pull_request:
     types: [closed]
+  push:
+    branches: [ main ]
 
 env:
   PROJECT_ID: gen-lang-client-0502058841
 
 jobs:
-  # Deploy only when PR is merged by MarioH88 (approved and merged)
+  # Deploy when MarioH88 merges PR or pushes directly to main
   deploy:
     runs-on: ubuntu-latest
-    if: |
-      github.event.pull_request.merged == true &&
-      github.event.pull_request.merged_by.login == 'MarioH88'
+    # Deploy on any push to main by MarioH88 (simplified condition)
+    if: github.event_name == 'push' && github.actor == 'MarioH88'
     
     permissions:
       contents: read
       id-token: write
 
     steps:
-      - name: PR Approval Deploy Info
+      - name: Deploy Info
         run: |
-          echo "✅ AUTO-DEPLOY: PR approved and merged by @MarioH88"
-          echo "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}"
-          echo "Author: @${{ github.event.pull_request.user.login }}"
-          echo "Merged by: @${{ github.event.pull_request.merged_by.login }}"
-          echo "Deploying approved changes..."
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "AUTO-DEPLOY: Direct push by @MarioH88"
+          else
+            echo "AUTO-DEPLOY: PR approved and merged by @MarioH88"
+            echo "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}"
+            echo "Author: @${{ github.event.pull_request.user.login }}"
+          fi
+          echo "Deploying to: https://devops-backup-1002595611169.europe-west1.run.app"
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,5 +50,6 @@ jobs:
 
       - name: Deployment Success
         run: |
-          echo "✅ DEPLOYMENT COMPLETED via Cloud Build"
-          echo "PR #${{ github.event.pull_request.number }} deployed successfully!"
+          echo "DEPLOYMENT COMPLETED"
+          echo "URL: https://devops-backup-1002595611169.europe-west1.run.app"
+          echo "Your app is now updated!"

@@ -67,7 +67,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', CONTENT_TYPE_HTML)
             self.end_headers()
             error_html = '''
-            <html><head><title>🚀 jkkjdfdhasdja DBU suck</title></head>
+            <html><head><title>🚀 DevOps Demo - Page Not Found</title></head>
             <body style="font-family: Arial; text-align: center; padding: 50px; background: linear-gradient(45deg, #FF6B6B, #4ECDC4); color: white;">
                 <h1>🚀 LIVE DevOps DEMO!</h1>
                 <h2>Page Not Found - But The Pipeline Works!</h2>
@@ -295,7 +295,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         </head>
         <body>
             <div class="error-container">
-                <h1>🚀 MSITM dsadad cacacasdasd</h1>https://devops-backup-956422402300.europe-west1.run.app/
+                <h1>🚀 DevOps Demo Dashboard</h1>
                 <h2>❌ {title}</h2>
                 <p>{message}</p>
                 <p><small>Check logs for more details</small></p>
@@ -317,7 +317,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <!DOCTYPE html>
         <html lang="en">
         <head>
-            <title>🚀 MISTMN Testing Bot dfasdfasfds</title>
+            <title>🚀 Live Trading Dashboard</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="refresh" content="60">
@@ -440,13 +440,13 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>DBU DevOps Live Dashboard</h1>
+                    <h1>I need sleep</h1>
                     <p><span class="working-indicator"></span>DevOps Pipeline Status: ACTIVE</p>
                     <p>🌐 Auto-deployed via GitHub → Cloud Build → Cloud Run</p>
                 </div>
                 
                 <div style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); padding: 15px; margin: 20px 0; border-radius: 10px; color: white; text-align: center; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                    🔒 NO AUTO-DEPLOY: Direct push by owner (requires PR approval) 🔒
+                    🚀 asdads successy to https://devops-backup-1002595611169.europe-west1.run.app/ 🚀
                 </div>
                 
                 <div class="status-banner">
@@ -456,7 +456,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 
                 <div class="status-bar">
                     <div class="status-item">
-                        <div class="status-vyeue {market_status_class}">
+                        <div class="status-value {market_status_class}">
                             {market_status_emoji} {market_status_text}
                         </div>
                         <div>Market Status</div>
