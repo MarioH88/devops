@@ -501,7 +501,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>Group 2 DevOps Project</h1>
+                    <h1>Group 2 DevOps Project Web</h1>
                     <p><span class="working-indicator"></span>DevOps Pipeline Status: ACTIVE</p>
                     <p>🌐 Auto-deployed via GitHub → Cloud Build → Cloud Run</p>
                 </div>
