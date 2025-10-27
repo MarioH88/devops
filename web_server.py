@@ -440,7 +440,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>DBU DevOps Dashboard</h1>
+                    <h1>DBU DevOps Dashboard II</h1>
                     <p><span class="working-indicator"></span>DevOps Pipeline Status: ACTIVE</p>
                     <p>🌐 Auto-deployed via GitHub → Cloud Build → Cloud Run</p>
                 </div>
