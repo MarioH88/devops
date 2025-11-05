@@ -501,7 +501,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>6 7 nerd alert levi nayeli</h1>
+                    <h1>Glorious King Ever Damien Aguirre</h1>
                     <p><span class="working-indicator"></span>DevOps Pipeline Status: ACTIVE</p>
                     <p>🌐 Auto-deployed via GitHub → Cloud Build → Cloud Run</p>
                 </div>
