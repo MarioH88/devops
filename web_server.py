@@ -503,7 +503,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 <div class="header">
                     <h1> Glorious King Ever Aguirre </h1>
                     <p><span class="working-indicator"></span>DevOps Pipeline Status: ACTIVE</p>
-                    <p>🌐 Auto-deployed via GitHub → Cloud Build → Cloud Run</p>
+                    <p>Levi and Jace are in love <3</p>
                 </div>
                 
                 <div style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); padding: 15px; margin: 20px 0; border-radius: 10px; color: white; text-align: center; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
